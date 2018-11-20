@@ -43,6 +43,7 @@ LastBlocks.getInitialProps = async ({ req }) => {
     // blockPromises.push(web3.eth.getBlockTransactionCount(block))
   }
 
+  // Fetch all blocks concurrently
   const blocks = await Promise.all(blockPromises)
 
   return { blocks }
